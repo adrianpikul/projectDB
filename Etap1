@@ -1,0 +1,19 @@
+1.	Określenie tematyki i zakresu projektu
+Projekt, który chciałbym zrealizować, będzie bazą danych pomagającej firmie zarządzać projektami oraz pracownikami. Będzie on pozawalał na takie funkcjonalności jak administracje użytkownikami, klientami oraz projektami tj. dodanie, usunięcie oraz modyfikacja. Dodatkową opcją będą karty pracy.
+
+2.	Określenie funkcji bazy danych i ich priorytetu
+W dzisiejszych czasach dane gromadzone przez różne firmy, czy instytucje są na wagę złota i muszą być gdzieś gromadzone. Kluczowe jest filtrowanie tych danych w jak najszybszym czasie. W moim projekcie baza danych będzie przechowywała dane klientów, użytkowników oraz, projektów.
+	Projekt uwzględnia 2 rodzaje użytkowników:
+•	Administrator - Pełen dostęp do całej bazy danych
+•	Pracownik – Posiada prawa do modyfikacji oraz dodawania klientów, oraz projektów. Uzupełnia kartę pracy.
+	
+3.	Wybór technologii i typu bazy danych
+Projekt zostanie wykonany przy wykorzystaniu relacyjnych baz danych. Zdecydowałem się korzystać z MySQL ponieważ jest to darmowe oprogramowanie na licencji open source i doskonale sprawdza się przy małych projektach.
+
+4.	Wybór narzędzi
+Swoją pracę oprę głównie na narzędziu MySQL Workbench, ponieważ jest to graficzne narzędzie do projektowania i administrowania baz danych.
+	Według mnie doskonale się sprawdzi podczas tego projektu.
+
+5.	Repozytorium GitHub
+Link do repozytorium na GitHub
+  https://github.com/adrianpikul/projectDB
