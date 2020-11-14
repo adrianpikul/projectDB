@@ -1,0 +1,35 @@
+2.	Opis tabel bazy danych i ich funkcji
+
+
+Customers – Przechowuje szczegółowe dane klientów. Jest w relacji jeden do wielu z tabelą Projekty, ponieważ, jeden klient może być w posiadaniu kilku projektów
+
+Projects – Przechowuje dane odnośnie projektów. Jest w relacji jeden do wiele do jednego, ponieważ jeden projekt może mieć tylko jednego klienta.
+Jest też w drugiej relacji jeden do wielu z tabelą ProjFinanse, ponieważ jeden projekt może mieć jedne finanse, a ProjFinanse mogą mieć kilka projektów. 
+ProjFinance – Przechowuje informacje odnośnie zysków i kosztów firmy. W koszty wliczamy premie dla kierownika projektu, dodatkowe koszty oraz koszty standardowe. Pod uwagę jest też wzięta ewentualna kara za opóźnienia projektu.
+
+DailyRaport – Zadaniem tej tabeli jest przechowywanie informacji, które później wykorzystamy do policzenia kosztów projektu względem ilości pracujących osób i ilości poświęconych dni. Coś na zasadzie karty pracy.
+
+Workers – Tabela przechowująca informacje o pracownikach, ważnymi rekordami są tutaj pracLogin i pracPassword -> Mają one być pomocniczne przy logowaniu bezpośrednio do aplikacji, nie do bazy danych. Jest to powiązane z tabelą Role. Podczas logowanie aplikacja miałaby pobierać login i hasło oraz role i według tego dostosowywać funkcjonalność. W tym projekcie aplikacja dla klientów jest nieuwzględniona.
+
+Rules – Jest odpowiedzialna za przydzielanie funkcjonalności użytkownikom, rozróżniam następujące role:
+-    Administrator (szef)
+-	Pracownik
+-	Księgowa
+
+Contracts – Tabela zawierająca podstawowe informacje na temat długości trwania umowy, data rozpoczęcia, stanowiska oraz wynagrodzenia.
+
+3.	Prezentacja opisów bazy danych
+
+Pracownik posiada prawa:
+-	Dodawanie i modyfikowanie projektów, klientów oraz uzupełnianie raportów dnia
+
+Księgowa
+-	Prawa pracownika + dodatkowo pełna modyfikacja tabeli ProjFinance, Contacts, Workers
+
+Administrator(szef)
+-	Pełne prawa dostępu do bazy danych
+
+
+4.	Prezentacja problemów w realizacji
+
+Jednym z problemów było wymyślenie sposobu na karty pracy, aby zliczać koszty danego projektu. Finalnie założenie było takie, że dziennie pracownik może pracować tylko przy jednym projekcie. Dzienny raport pracy ma być uzupełniany codziennie, i na podstawie daty z raportu odpytam rekordy z okresu trwania projektu, sprawdzając w tym czasie pensje pracownika w tabeli umowy. 
