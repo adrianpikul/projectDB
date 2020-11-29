@@ -1,4 +1,4 @@
--- SEVERAL SELECTS
+-- SELECTS
 
 -- Show name, surname from workers ID
 SELECT Name, Surname 
