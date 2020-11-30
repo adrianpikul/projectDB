@@ -15,7 +15,7 @@ ORDER BY Area;
 SELECT * 
 FROM Contracts 
 WHERE idWorkers = 64 
-ORDER BY IDWORKERS, DATESTART;
+ORDER BY DATESTART;
 
 -- Show daily raport from project id, order by idDailyRaport
 SELECT * 
@@ -30,7 +30,7 @@ WHERE Date BETWEEN STR_TO_DATE('2,1,2019','%d,%m,%Y')
 AND STR_TO_DATE('18,1,2020','%d,%m,%Y');
 
 -- Show project manager from Project ID
-SELECT * 
+SELECT dWorkers, Name, Surname, Phone, Mail, Pesel
 FROM mydb.Workers 
 WHERE idWorkers = (SELECT idManager FROM mydb.Projects WHERE  idProjects = 34);
 
@@ -45,7 +45,7 @@ FROM projDB.Projects p
 JOIN projDB.Customers c ON p.idProjects = c.idCustomers;
 
 -- Show Costumers Projects
-SELECT *, p.Name 
+SELECT c.Name, c.Surname, c.CompanyName, c.NIP, p.Name
 FROM mydb.Customers c 
 RIGHT JOIN mydb.Projects p ON p.idCustomers = c.idCustomers;
 
