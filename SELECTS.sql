@@ -30,7 +30,7 @@ WHERE Date BETWEEN STR_TO_DATE('2,1,2019','%d,%m,%Y')
 AND STR_TO_DATE('18,1,2020','%d,%m,%Y');
 
 -- Show project manager from Project ID
-SELECT dWorkers, Name, Surname, Phone, Mail, Pesel
+SELECT idWorkers, Name, Surname, Phone, Mail, Pesel
 FROM mydb.Workers 
 WHERE idWorkers = (SELECT idManager FROM mydb.Projects WHERE  idProjects = 34);
 
