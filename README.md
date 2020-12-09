@@ -1,2 +1,2 @@
 # projectDB
-Simple project DataBase
+Simple project dataBase
